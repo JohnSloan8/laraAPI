@@ -18,12 +18,12 @@ def get_item():
     items = listdir("data/text/")
     return {"items": items}
 
-@app.post("/upload-text/{item_id}")
-def create_item(item_id: int, item: Item):
-    if item_id in inventory:
-        return {"Error, item exists"}
-    inventory[item_id] = item
-    return inventory[item_id]
+# @app.post("/upload-text/{item_id}")
+# def create_item(item_id: int, item: Item):
+    # if item_id in inventory:
+        # return {"Error, item exists"}
+    # inventory[item_id] = item
+    # return inventory[item_id]
 
 @app.get("/segment-text/{text_file_name}")
 def create_item(text_file_name: str):
