@@ -57,8 +57,8 @@ def simple_sent_tokenize(text):
         sents = simple_sent_tokenize1(text)
         return '||'.join(sents) + '||'
     except Exception as e:
-        print_and_flush(f'*** Error: when trying to do simple sent tokenization')
-        print_and_flush(str(e))
+        lara_utils.print_and_flush(f'*** Error: when trying to do simple sent tokenization')
+        lara_utils.print_and_flush(str(e))
         return False
 
 def simple_sent_tokenize1(text):
